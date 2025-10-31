@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --galactic-blue: #1a237e;       /* Dunkles, intensives Blau */
+  --galactic-blue-light: #3949ab; /* Etwas helleres Blau */
+  --galactic-blue-dark: #0d1540;  /* Sehr dunkles Blau fast schwarz */
+  --dusky-red: #b71c1c;           /* Düstere, intensive Rot-Nuance */
+  --dusky-red-light: #f44336;     /* Leicht helleres Rot für Akzente */
+  --background-gradient: linear-gradient(135deg, #0d1540 0%, #1a237e 70%, #b71c1c 100%);
+  --text-color: #9c0cb9;          /* Helles Grau für Text */
+}
+
+body {
+
+  
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--galactic-blue-dark);
+  border-bottom: 4px solid var(--dusky-red);
+  color: var(--text-color);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--galactic-blue);
+  border-bottom: 3px solid var(--dusky-red);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  background: var(--galactic-blue-light);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--dusky-red);
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 0 8px var(--dusky-red-light);
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--dusky-red);
+  color: #fff;
+  box-shadow: 0 0 12px var(--dusky-red);
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: rgba(13, 21, 64, 0.8); /* leicht transparentes sehr dunkles Blau */
+  padding: 1.5rem;
+  border: 3px solid var(--dusky-red);
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--dusky-red-light);
+}
+
+h1, h2 {
+  color: var(--dusky-red-light);
+  text-shadow: 0 0 8px var(--dusky-red);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--galactic-blue-dark);
+  border-top: 4px solid var(--dusky-red);
+  color: var(--text-color);
+  margin-top: auto;
+}
+
+img {
+  max-width: 100%;
+  border: 2px solid var(--dusky-red);
+  border-radius: 6px;
+  box-shadow: 0 0 10px var(--dusky-red-light);
+}
+
+/* Teilnehmerseite spezielle Styles */
+.teilnehmer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.teilnehmer {
+  text-align: center;
+  background: rgba(26, 35, 126, 0.85);
+  border: 3px solid var(--dusky-red);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 180px;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 0 10px var(--dusky-red-light);
+}
+
+.teilnehmer:hover {
+  background: var(--dusky-red);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.teilnehmer img {
+  border: 2px solid var(--dusky-red-light);
+  border-radius: 4px;
+}
+
+.teilnehmer a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.5rem;
+}

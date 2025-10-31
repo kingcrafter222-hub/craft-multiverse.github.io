@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekt | Minecraft RP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Du kannst diesen CSS-Block auch in deine style.css auslagern */
+    .bildergalerie {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .bildergalerie img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #9146ff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .bildergalerie img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(145, 70, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📜 Projekt</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="projekt.html">Projekt</a>
+    <a href="roleplay.html">Roleplay</a>
+    <a href="nonrp.html">Non-RP</a>
+    <a href="teilnehmer.html">Teilnehmer</a>
+  </nav>
+
+  <section>
+    <h2>Über das Projekt</h2>
+    <p>Das Projekt handelt von Welten, die zusammen geschmolzen sind und dadurch eine neue, größere Welt erschaffen haben.</p>
+    <p>Darunter sind auch die Spieler der einzelnen Welten, die in diese neue Welt gelangt sind. Dies bedeutet, dass eine neue Bedrohung
+      entstehen wird. Schaffen es die Helden der verschiedenen Welten, die Welt vor dem Schrecken zu bewahren?
+    </p>
+
+    <!-- 📸 Zwei Bilder eingefügt -->
+    <div class="bildergalerie">
+      <img src="bilder/Welt1.jpg" alt="Das Tor">
+      <img src="bilder/Aether.jpg" alt="Aether-Welt">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Minecraft Multiverse</p>
+  </footer>
+</body>
+</html>

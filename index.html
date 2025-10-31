@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Multiverse Craft</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Countdown Styling */
+    #countdown-container {
+      text-align: center;
+      margin-top: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      box-shadow: 0 0 10px #6a00ff;
+    }
+
+    #countdown {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #a974ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> 🌌 Minecraft Multiverse 🌌</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="projekt.html">Projekt</a>
+    <a href="roleplay.html">Roleplay</a>
+    <a href="nonrp.html">Non-RP</a>
+    <a href="teilnehmer.html">Teilnehmer</a>
+  </nav>
+
+  <section>
+    <h2>Willkommen!</h2>
+    <p>Minecraft Multiverse ist ein Projekt, wo verschiedene Mod-Themen aufeinandertreffen.</p> 
+    <p>Sei es Technologie oder Magie – dies ist deine Wahl. Du kannst sowohl als RP-Player unterwegs sein als auch als Non-RP-Player. </p>
+    <p>Schließe dich einem Team an oder sei ein Solo-Player und erkunde die weite Welt.</p>
+
+    <h3>Was du wissen musst</h3>
+    <p>Jeder Streamer, der mitmacht, hat die Auswahl von 3 Mods. Voraussetzung: Forge 1.20.1 (Version 47.4.0).  
+    Keep Inventory ist aktiv, da einige Mods hohen Wert haben.</p>
+
+    <h4>Gibt es Regeln auf dem Server?</h4>
+    <p>Ja – kein X-Ray oder Hacken, da es den Spielspaß zerstört.  
+    PvP nur in Arenen und kein Griefing.</p>
+
+    <h5>An wen soll ich mich wenden, wenn ich mitmachen will oder Fragen habe?</h5>
+    <p>Bei Fragen oder Interesse meldet euch bei <strong>Sleepy Isona Niona🦝</strong> oder <strong>yukio2525</strong>.  
+    Wir freuen uns auf eure Teilnahme!</p>
+
+    <!-- ⏳ Countdown-Bereich -->
+    <div id="countdown-container">
+      <h3>Start des Projekts:</h3>
+      <div id="countdown">Wird geladen...</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Minecraft Multiverse | Erschaffen mit ❤️ und viel Redstone</p>
+  </footer>
+
+  <script>
+    // Ziel-Datum: 14. November 2025 um 18:00 Uhr
+    const zielDatum = new Date("Nov 14, 2025 18:00:00").getTime();
+
+    const timer = setInterval(function() {
+      const jetzt = new Date().getTime();
+      const diff = zielDatum - jetzt;
+
+      if (diff <= 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "🚀 Das Projekt hat begonnen!";
+        return;
+      }
+
+      const tage = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const stunden = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minuten = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const sekunden = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        tage + "T " + stunden + "H " + minuten + "M " + sekunden + "S ";
+    }, 1000);
+  </script>
+</body>
+</html>
